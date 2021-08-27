@@ -1,22 +1,37 @@
-﻿
-using System.Drawing;
+﻿using System;
+using System.Collections.Generic;
+using HelloWorld.Impl;
+using HelloWorld.Interfaces;
 using OpenCvSharp;
 
 namespace HelloWorld {
-	static class Program 
-	{
-		static void Main() 
-		{
-			var path = @"C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\HelloWorld\media\project\proj_2\Chip_001.jpg";
-			using var src = new Mat(path, ImreadModes.Grayscale);
-			using var dst = new Mat();
-        
-			Cv2.Canny(src, dst, 50, 200);
-			using (new Window("src image", src)) 
-			using (new Window("dst image", dst)) 
-			{
-				Cv2.WaitKey();
-			}
+	static class Program {
+		private static IArtifactsFinder _finder;
+		private static IInstruments _instruments;
+
+		private static void Config() {
+			_instruments = new InstrumentDef();
+			_finder = new ArtifactFinderProj2(_instruments);
 		}
-	}
+
+
+		static void Main() {
+			Config();
+
+			List<Mat> images = _instruments.GetImages(@"media/project/proj_2/Chip_%03d.jpg");
+			images.ForEach(originalPhoto => {
+				
+				(Mat originalBlobs, Mat maskBlobs) results = _finder.Analise(originalPhoto);
+				using Mat orgBLob = _instruments.ResizePhoto(results.originalBlobs, 1000, 800);
+				using Mat maskBlob = _instruments.ResizePhoto(results.maskBlobs, 1000, 800);
+				using (new Window("org", orgBLob))
+				using (new Window("mask", maskBlob)) {
+					Cv2.WaitKey();
+				}
+				
+			});
+
+			
+		}
+	} 
 }
