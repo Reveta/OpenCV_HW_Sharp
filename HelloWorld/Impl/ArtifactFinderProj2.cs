@@ -14,10 +14,17 @@ namespace HelloWorld.Impl {
 			image = image.Threshold(100, 255, ThresholdTypes.Binary);
 			// image = FilteringSharp(image);
 
+			//TODO normal bluring and sharping
+			var imageWidth = image.Width;
+			var imageHeight = image.Height;
+			image = this._instruments.ResizePhoto(image, 600, 480);
+			image = this._instruments.ResizePhoto(image, imageWidth, imageHeight);
+
 			//Invert color
-			Cv2.BitwiseNot(image, image);
+			// Cv2.BitwiseNot(image, image);
 
 			// Cv2.BilateralFilter(image, image, MatType.CV_32F, 75, 75);
+
 
 			KeyPoint[] keyPoints = BlobDetect(image);
 
@@ -30,7 +37,7 @@ namespace HelloWorld.Impl {
 		private KeyPoint[] BlobDetect(Mat image) {
 			var detector = SimpleBlobDetector.Create(
 				new SimpleBlobDetector.Params() {
-					// MaxThreshold = 255,
+					// MinThreshold = 100,
 					FilterByArea = true,
 					MinArea = 200,
 					FilterByConvexity = true,
@@ -42,7 +49,7 @@ namespace HelloWorld.Impl {
 			KeyPoint[] keyPoints = detector.Detect(image);
 			return keyPoints;
 		}
-		
+
 		private Mat FilteringSharp(Mat image) {
 			// TODO maybe bugged
 			/*double[,] array = {
