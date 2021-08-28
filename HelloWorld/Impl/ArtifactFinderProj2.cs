@@ -11,25 +11,30 @@ namespace HelloWorld.Impl {
 		public (Mat originalBlobs, Mat maskBlobs) Analise(Mat originalPhoto) {
 			Mat image = originalPhoto.Clone();
 
-			image = image.Threshold(100, 255, ThresholdTypes.Binary);
+			// image = image.Threshold(100, 255, ThresholdTypes.Binary);
 			// image = FilteringSharp(image);
 
 			//TODO normal bluring and sharping
 			var imageWidth = image.Width;
 			var imageHeight = image.Height;
-			image = this._instruments.ResizePhoto(image, 600, 480);
-			image = this._instruments.ResizePhoto(image, imageWidth, imageHeight);
+			// image = this._instruments.ResizePhoto(image, 600, 480);
+			// image = this._instruments.ResizePhoto(image, imageWidth, imageHeight);
 
 			//Invert color
 			// Cv2.BitwiseNot(image, image);
 
-			// Cv2.BilateralFilter(image, image, MatType.CV_32F, 75, 75);
+			Cv2.ImShow("test", image);
+			Cv2.WaitKey();
+			image = FilteringSharp(image);
+			Cv2.ImShow("test", image);
+			Cv2.WaitKey();
+			// Cv2.BilateralFilter(image, image, -1, 75, 75);
 
 
-			KeyPoint[] keyPoints = BlobDetect(image);
+			// KeyPoint[] keyPoints = BlobDetect(image);
 
-			Cv2.DrawKeypoints(image, keyPoints, image, Scalar.Red, DrawMatchesFlags.Default);
-			Cv2.DrawKeypoints(originalPhoto, keyPoints, originalPhoto, Scalar.Red, DrawMatchesFlags.Default);
+			// Cv2.DrawKeypoints(image, keyPoints, image, Scalar.Red, DrawMatchesFlags.Default);
+			// Cv2.DrawKeypoints(originalPhoto, keyPoints, originalPhoto, Scalar.Red, DrawMatchesFlags.Default);
 
 			return (originalPhoto, image);
 		}
@@ -51,26 +56,29 @@ namespace HelloWorld.Impl {
 		}
 
 		private Mat FilteringSharp(Mat image) {
+			Mat imagez = image.Clone();
 			// TODO maybe bugged
 			/*double[,] array = {
 				{ -1, -1, -1 },
-				{ -1,  9, -1 },
+				{ -1, 9, -1 },
 				{ -1, -1, -1 }
-			}*/
-			;
+			};*/
 
 			double[,] array = {
 				{ 0, 0, 0 },
 				{ 0, 1, 0 },
 				{ 0, 0, 0 }
 			};
-			Mat kernel = this._instruments.GenKernel(array, image.Type());
 
-			var dst = new Mat();
-			image.CopyTo(dst);
+			Mat kernel = this._instruments.GenKernel(array);
+			// Mat kernel = Cv2.GetStructuringElement (MorphShapes.Ellipse, new Size (101, 101));
 
-			Cv2.Filter2D(src: image, dst: dst, image.Type(), kernel, new Point(0, 0));
-			return dst;
+			// Mat resizeKernel = this._instruments.ResizePhoto(kernel, 1000, 1000);
+			// Cv2.ImShow("test", kernel);
+			Cv2.WaitKey();
+
+			Mat filter2D = imagez.Filter2D(ddepth: -1, kernel);
+			return filter2D;
 		}
 	}
 }

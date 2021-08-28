@@ -10,11 +10,11 @@ namespace HelloWorld.Impl {
 			return resize;
 		}
 
-		public Mat GenKernel(double[,] array, MatType matType) {
-			// TODO maybe bugged   
+		public Mat GenKernel(double[,] array) {
 			int row = array.GetLength(0);
 			int col = array.GetLength(1);
-			var kernel = new Mat(row, col, matType, array);
+			
+			var kernel = new Mat(row, col, MatType.CV_8U, data: array);
 			return kernel;
 		}
 
