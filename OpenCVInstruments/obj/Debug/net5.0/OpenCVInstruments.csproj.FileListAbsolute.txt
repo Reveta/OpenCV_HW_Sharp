@@ -1,0 +1,12 @@
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\OpenCVInstruments\bin\Debug\net5.0\OpenCVInstruments.deps.json
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\OpenCVInstruments\bin\Debug\net5.0\OpenCVInstruments.dll
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\OpenCVInstruments\bin\Debug\net5.0\ref\OpenCVInstruments.dll
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\OpenCVInstruments\bin\Debug\net5.0\OpenCVInstruments.pdb
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\OpenCVInstruments\obj\Debug\net5.0\OpenCVInstruments.csproj.AssemblyReference.cache
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\OpenCVInstruments\obj\Debug\net5.0\OpenCVInstruments.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\OpenCVInstruments\obj\Debug\net5.0\OpenCVInstruments.AssemblyInfoInputs.cache
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\OpenCVInstruments\obj\Debug\net5.0\OpenCVInstruments.AssemblyInfo.cs
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\OpenCVInstruments\obj\Debug\net5.0\OpenCVInstruments.csproj.CoreCompileInputs.cache
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\OpenCVInstruments\obj\Debug\net5.0\OpenCVInstruments.dll
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\OpenCVInstruments\obj\Debug\net5.0\ref\OpenCVInstruments.dll
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\OpenCVInstruments\obj\Debug\net5.0\OpenCVInstruments.pdb

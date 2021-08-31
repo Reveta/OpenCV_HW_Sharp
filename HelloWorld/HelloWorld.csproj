@@ -2,9 +2,9 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net5.0</TargetFramework>
         <SignAssembly>true</SignAssembly>
         <PublicSign>false</PublicSign>
+        <TargetFramework>net5.0-windows</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
@@ -13,6 +13,62 @@
     </ItemGroup>
 
     <ItemGroup>
+      <None Include="bin\Debug\net5.0-windows\media\blobs\blob.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\blobs\microchips_1.png" />
+      <None Include="bin\Debug\net5.0-windows\media\blobs\microchips_2.png" />
+      <None Include="bin\Debug\net5.0-windows\media\blur_kernel.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\bright.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\color_test_1.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\color_test_2.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\dark.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\edgeDetection\Chip_002.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\filtering_color_test.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\grayscale.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\identity.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\laptops\laptop_1.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\laptops\laptop_2.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\laptops\laptop_3.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\patched.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\photos1video\img.png" />
+      <None Include="bin\Debug\net5.0-windows\media\photos1video\img_1.png" />
+      <None Include="bin\Debug\net5.0-windows\media\photos1video\Photo0000.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\photos1video\Photo0001.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\photos1video\Photo0002.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\photos1video\Photo0003.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\photos1video\Photo0004.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\photos1video\Photo0005.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\project\proj_1\Chip_001.tif" />
+      <None Include="bin\Debug\net5.0-windows\media\project\proj_1\Chip_002.tif" />
+      <None Include="bin\Debug\net5.0-windows\media\project\proj_1\Chip_003.tif" />
+      <None Include="bin\Debug\net5.0-windows\media\project\proj_1\Chip_004.tif" />
+      <None Include="bin\Debug\net5.0-windows\media\project\proj_1\Chip_005.tif" />
+      <None Include="bin\Debug\net5.0-windows\media\project\proj_1\Chip_006.tif" />
+      <None Include="bin\Debug\net5.0-windows\media\project\proj_1\Chip_007.tif" />
+      <None Include="bin\Debug\net5.0-windows\media\project\proj_1\Chip_008.tif" />
+      <None Include="bin\Debug\net5.0-windows\media\project\proj_1\Chip_009.tif" />
+      <None Include="bin\Debug\net5.0-windows\media\project\proj_1\IDC Chip analyses application.pdf" />
+      <None Include="bin\Debug\net5.0-windows\media\project\proj_2\Chip_001.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\project\proj_2\Chip_002.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\project\proj_2\Chip_003.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\project\proj_2\Chip_004.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\project\proj_2\Chip_005.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\project\proj_2\IDC Particle Application Description.pdf" />
+      <None Include="bin\Debug\net5.0-windows\media\rotated_image.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\SARS-CoV-2_EM.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\test.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\treshold\gradient.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\treshold\gradient.png" />
+      <None Include="bin\Debug\net5.0-windows\media\treshold\opencv-thresh-binary-inv.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\treshold\opencv-thresh-binary-maxval.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\treshold\opencv-thresh-binary.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\treshold\opencv-thresh-to-zero-inv.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\treshold\opencv-thresh-tozero.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\treshold\opencv-thresh-trunc.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\treshold\opencv-threshold-example.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\treshold\opencv-threshold-example.png" />
+      <None Include="bin\Debug\net5.0-windows\media\treshold\test_img.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\treshold\__init__.py" />
+      <None Include="bin\Debug\net5.0-windows\media\video_new.gif" />
       <None Include="bin\Debug\net5.0\media\blobs\blob.jpg" />
       <None Include="bin\Debug\net5.0\media\blobs\microchips_1.png" />
       <None Include="bin\Debug\net5.0\media\blobs\microchips_2.png" />
@@ -21,6 +77,7 @@
       <None Include="bin\Debug\net5.0\media\color_test_1.jpg" />
       <None Include="bin\Debug\net5.0\media\color_test_2.jpg" />
       <None Include="bin\Debug\net5.0\media\dark.jpg" />
+      <None Include="bin\Debug\net5.0\media\edgeDetection\Chip_002.jpg" />
       <None Include="bin\Debug\net5.0\media\filtering_color_test.jpg" />
       <None Include="bin\Debug\net5.0\media\grayscale.jpg" />
       <None Include="bin\Debug\net5.0\media\identity.jpg" />
@@ -68,6 +125,22 @@
       <None Include="bin\Debug\net5.0\media\treshold\test_img.jpg" />
       <None Include="bin\Debug\net5.0\media\treshold\__init__.py" />
       <None Include="bin\Debug\net5.0\media\video_new.gif" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="bin\Debug\net5.0-windows\media\edgeDetection\input_image-1.jpg" />
+      <Content Include="bin\Debug\net5.0\media\edgeDetection\input_image-1.jpg" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="System.Windows.Forms" Condition="'$(TargetFramework)' == 'net48'" />
+      <Reference Include="System.Windows.Forms.DataVisualization" Condition="'$(TargetFramework)' == 'net48'" />
+      <Reference Include="System.Windows.Forms.DataVisualization.Design" Condition="'$(TargetFramework)' == 'net48'" />
+      <Reference Include="WindowsFormsIntegration" Condition="'$(TargetFramework)' == 'net48'" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\OpenCVInstruments\OpenCVInstruments.csproj" />
     </ItemGroup>
 
 </Project>

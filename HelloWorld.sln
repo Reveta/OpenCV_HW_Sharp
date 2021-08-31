@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{7CE3540A-BD43-497C-83EF-662B36800F84}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype", "Prototype\Prototype.csproj", "{440D937D-6A80-4D6F-89EF-0DAC6CB2DE3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVInstruments", "OpenCVInstruments\OpenCVInstruments.csproj", "{61A26FE8-A5D3-4774-AED8-638B23525A0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{7CE3540A-BD43-497C-83EF-662B36800F84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CE3540A-BD43-497C-83EF-662B36800F84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CE3540A-BD43-497C-83EF-662B36800F84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{440D937D-6A80-4D6F-89EF-0DAC6CB2DE3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{440D937D-6A80-4D6F-89EF-0DAC6CB2DE3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{440D937D-6A80-4D6F-89EF-0DAC6CB2DE3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{440D937D-6A80-4D6F-89EF-0DAC6CB2DE3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61A26FE8-A5D3-4774-AED8-638B23525A0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61A26FE8-A5D3-4774-AED8-638B23525A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61A26FE8-A5D3-4774-AED8-638B23525A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61A26FE8-A5D3-4774-AED8-638B23525A0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
