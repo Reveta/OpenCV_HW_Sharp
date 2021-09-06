@@ -133,13 +133,32 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "OpenCvSharp4": "4.5.3.20210817"
+          "OpenCvSharp4": "4.5.3.20210817",
+          "OpenCvSharp4.Windows": "4.5.3.20210817"
         },
         "compile": {
           "bin/placeholder/OpenCVInstruments.dll": {}
         },
         "runtime": {
           "bin/placeholder/OpenCVInstruments.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "Prototype/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "OpenCVInstruments": "1.0.0",
+          "OpenCvSharp4": "4.5.3.20210817",
+          "OpenCvSharp4.Windows": "4.5.3.20210817"
+        },
+        "compile": {
+          "bin/placeholder/Prototype.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Prototype.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WindowsForms"
@@ -366,13 +385,19 @@
       "type": "project",
       "path": "../OpenCVInstruments/OpenCVInstruments.csproj",
       "msbuildProject": "../OpenCVInstruments/OpenCVInstruments.csproj"
+    },
+    "Prototype/1.0.0": {
+      "type": "project",
+      "path": "../Prototype/Prototype.csproj",
+      "msbuildProject": "../Prototype/Prototype.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
       "OpenCVInstruments >= 1.0.0",
       "OpenCvSharp4 >= 4.5.3.20210817",
-      "OpenCvSharp4.Windows >= 4.5.3.20210817"
+      "OpenCvSharp4.Windows >= 4.5.3.20210817",
+      "Prototype >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -409,6 +434,9 @@
           "projectReferences": {
             "C:\\Users\\gfdsr\\OneDrive\\prFiles\\job\\Freelance\\OpenCVOrigin\\cSharp\\HelloWorld\\OpenCVInstruments\\OpenCVInstruments.csproj": {
               "projectPath": "C:\\Users\\gfdsr\\OneDrive\\prFiles\\job\\Freelance\\OpenCVOrigin\\cSharp\\HelloWorld\\OpenCVInstruments\\OpenCVInstruments.csproj"
+            },
+            "C:\\Users\\gfdsr\\OneDrive\\prFiles\\job\\Freelance\\OpenCVOrigin\\cSharp\\HelloWorld\\Prototype\\Prototype.csproj": {
+              "projectPath": "C:\\Users\\gfdsr\\OneDrive\\prFiles\\job\\Freelance\\OpenCVOrigin\\cSharp\\HelloWorld\\Prototype\\Prototype.csproj"
             }
           }
         }

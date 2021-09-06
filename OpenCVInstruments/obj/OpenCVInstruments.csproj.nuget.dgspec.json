@@ -47,6 +47,10 @@
             "OpenCvSharp4": {
               "target": "Package",
               "version": "[4.5.3.20210817, )"
+            },
+            "OpenCvSharp4.Windows": {
+              "target": "Package",
+              "version": "[4.5.3.20210817, )"
             }
           },
           "imports": [

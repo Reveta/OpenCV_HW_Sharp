@@ -1,4 +1,5 @@
-﻿using OpenCvSharp;
+﻿using OpenCVInstruments.Interfaces;
+using OpenCvSharp;
 using Prototype.Interfaces;
 
 namespace Prototype.Impl {
@@ -29,7 +30,7 @@ namespace Prototype.Impl {
 			return (originalPhoto, image);
 		}
 
-		private double GetAvrColorInSquare(Mat imageGrayScale, int x1, int y1, int sideLenght) {
+		public double GetAvrColorInSquare(Mat imageGrayScale, int x1, int y1, int sideLenght) {
 			Rect rectCrop = new Rect(x1, y1, sideLenght, sideLenght);
 			Mat croppedImage = new Mat(imageGrayScale, rectCrop);
 
@@ -38,7 +39,7 @@ namespace Prototype.Impl {
 			return mean.Val0;
 		}
 
-		private double GetAvrColorInSquare(Mat imageGrayScale, int xy1, int sideLenght) {
+		public double GetAvrColorInSquare(Mat imageGrayScale, int xy1, int sideLenght) {
 			return GetAvrColorInSquare(imageGrayScale, xy1, xy1, sideLenght);
 		}
 	}

@@ -1,4 +1,5 @@
-﻿using OpenCvSharp;
+﻿using OpenCVInstruments.Interfaces;
+using OpenCvSharp;
 using Prototype.Interfaces;
 
 namespace Prototype.Impl {

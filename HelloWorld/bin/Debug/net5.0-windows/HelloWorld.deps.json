@@ -10,7 +10,8 @@
         "dependencies": {
           "OpenCVInstruments": "1.0.0",
           "OpenCvSharp4": "4.5.3.20210817",
-          "OpenCvSharp4.Windows": "4.5.3.20210817"
+          "OpenCvSharp4.Windows": "4.5.3.20210817",
+          "Prototype": "1.0.0"
         },
         "runtime": {
           "HelloWorld.dll": {}
@@ -110,10 +111,21 @@
       "System.Runtime.CompilerServices.Unsafe/5.0.0": {},
       "OpenCVInstruments/1.0.0": {
         "dependencies": {
-          "OpenCvSharp4": "4.5.3.20210817"
+          "OpenCvSharp4": "4.5.3.20210817",
+          "OpenCvSharp4.Windows": "4.5.3.20210817"
         },
         "runtime": {
           "OpenCVInstruments.dll": {}
+        }
+      },
+      "Prototype/1.0.0": {
+        "dependencies": {
+          "OpenCVInstruments": "1.0.0",
+          "OpenCvSharp4": "4.5.3.20210817",
+          "OpenCvSharp4.Windows": "4.5.3.20210817"
+        },
+        "runtime": {
+          "Prototype.dll": {}
         }
       }
     }
@@ -188,6 +200,11 @@
       "hashPath": "system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
     },
     "OpenCVInstruments/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Prototype/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

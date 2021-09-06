@@ -12,7 +12,9 @@ namespace HelloWorld {
 		private static ICodeTester _tester;
 
 		private static void Config() {
-			_tester = new EdgeDetector();
+			// _tester = new EdgeDetector();
+			// _tester = new ExtraThreshold();
+			_tester = new ColorTransTest();
 			_instruments = new InstrumentDef();
 		}
 

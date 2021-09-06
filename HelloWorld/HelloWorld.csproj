@@ -22,6 +22,7 @@
       <None Include="bin\Debug\net5.0-windows\media\color_test_2.jpg" />
       <None Include="bin\Debug\net5.0-windows\media\dark.jpg" />
       <None Include="bin\Debug\net5.0-windows\media\edgeDetection\Chip_002.jpg" />
+      <None Include="bin\Debug\net5.0-windows\media\edgeDetection\Chip_008.tif" />
       <None Include="bin\Debug\net5.0-windows\media\filtering_color_test.jpg" />
       <None Include="bin\Debug\net5.0-windows\media\grayscale.jpg" />
       <None Include="bin\Debug\net5.0-windows\media\identity.jpg" />
@@ -141,6 +142,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\OpenCVInstruments\OpenCVInstruments.csproj" />
+      <ProjectReference Include="..\Prototype\Prototype.csproj" />
     </ItemGroup>
 
 </Project>

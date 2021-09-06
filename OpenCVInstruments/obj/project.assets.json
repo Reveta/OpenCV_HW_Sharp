@@ -45,6 +45,50 @@
           "lib/netcoreapp2.1/OpenCvSharp.dll": {}
         }
       },
+      "OpenCvSharp4.runtime.win/4.5.3.20210817": {
+        "type": "package",
+        "build": {
+          "build/netcoreapp/OpenCvSharp4.runtime.win.props": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-x64/native/OpenCvSharpExtern.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/opencv_videoio_ffmpeg453_64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/OpenCvSharpExtern.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/opencv_videoio_ffmpeg453.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "OpenCvSharp4.Windows/4.5.3.20210817": {
+        "type": "package",
+        "dependencies": {
+          "OpenCvSharp4": "4.5.3.20210817",
+          "OpenCvSharp4.WpfExtensions": "4.5.3.20210817",
+          "OpenCvSharp4.runtime.win": "4.5.3.20210817"
+        }
+      },
+      "OpenCvSharp4.WpfExtensions/4.5.3.20210817": {
+        "type": "package",
+        "dependencies": {
+          "OpenCvSharp4": "4.5.3.20210817"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/OpenCvSharp.WpfExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/OpenCvSharp.WpfExtensions.dll": {}
+        }
+      },
       "System.Drawing.Common/5.0.2": {
         "type": "package",
         "dependencies": {
@@ -161,6 +205,50 @@
         "opencvsharp4.nuspec"
       ]
     },
+    "OpenCvSharp4.runtime.win/4.5.3.20210817": {
+      "sha512": "q2PknNPPAJHjVEsrgdHtWVHzZsNlANnkj2SCw4DC/x8qeAX+Skp93KPLVoELNyU415P7RyjDHn7CGLSpNpltyQ==",
+      "type": "package",
+      "path": "opencvsharp4.runtime.win/4.5.3.20210817",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net/OpenCvSharp4.runtime.win.props",
+        "build/netcoreapp/OpenCvSharp4.runtime.win.props",
+        "build/netstandard/OpenCvSharp4.runtime.win.props",
+        "opencvsharp4.runtime.win.4.5.3.20210817.nupkg.sha512",
+        "opencvsharp4.runtime.win.nuspec",
+        "runtimes/win-x64/native/OpenCvSharpExtern.dll",
+        "runtimes/win-x64/native/opencv_videoio_ffmpeg453_64.dll",
+        "runtimes/win-x86/native/OpenCvSharpExtern.dll",
+        "runtimes/win-x86/native/opencv_videoio_ffmpeg453.dll"
+      ]
+    },
+    "OpenCvSharp4.Windows/4.5.3.20210817": {
+      "sha512": "zCPiZmcQaYnZSInZNNXg3ppyZb9DvaZgKTgEt4yi/sLctEWxW3g4UKOdEOqjbpJzL2kSh//wkOYwtm2xjvKTfw==",
+      "type": "package",
+      "path": "opencvsharp4.windows/4.5.3.20210817",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "opencvsharp4.windows.4.5.3.20210817.nupkg.sha512",
+        "opencvsharp4.windows.nuspec"
+      ]
+    },
+    "OpenCvSharp4.WpfExtensions/4.5.3.20210817": {
+      "sha512": "dutuhSGpZ/NrZT4bjuO5Jb5XnQfYdjrOcXtVGYc7RaEwXEmfCEPaAckmnZT8RXW2lM8KJaznSs3Arw+Ud4L2gA==",
+      "type": "package",
+      "path": "opencvsharp4.wpfextensions/4.5.3.20210817",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/OpenCvSharp.WpfExtensions.dll",
+        "lib/net461/OpenCvSharp.WpfExtensions.xml",
+        "lib/netcoreapp3.1/OpenCvSharp.WpfExtensions.dll",
+        "lib/netcoreapp3.1/OpenCvSharp.WpfExtensions.xml",
+        "opencvsharp4.wpfextensions.4.5.3.20210817.nupkg.sha512",
+        "opencvsharp4.wpfextensions.nuspec"
+      ]
+    },
     "System.Drawing.Common/5.0.2": {
       "sha512": "rvr/M1WPf24ljpvvrVd74+NdjRUJu1bBkspkZcnzSZnmAUQWSvanlQ0k/hVHk+cHufZbZfu7vOh/vYc0q5Uu/A==",
       "type": "package",
@@ -261,7 +349,8 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "OpenCvSharp4 >= 4.5.3.20210817"
+      "OpenCvSharp4 >= 4.5.3.20210817",
+      "OpenCvSharp4.Windows >= 4.5.3.20210817"
     ]
   },
   "packageFolders": {
@@ -309,6 +398,10 @@
         "targetAlias": "net5.0",
         "dependencies": {
           "OpenCvSharp4": {
+            "target": "Package",
+            "version": "[4.5.3.20210817, )"
+          },
+          "OpenCvSharp4.Windows": {
             "target": "Package",
             "version": "[4.5.3.20210817, )"
           }
