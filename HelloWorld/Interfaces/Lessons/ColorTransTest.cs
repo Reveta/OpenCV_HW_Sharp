@@ -13,7 +13,7 @@ namespace HelloWorld.Interfaces.Lessons {
 		private IInstruments _instruments = new InstrumentDef();
 
 		[SuppressMessage("ReSharper.DPA", "DPA0002: Excessive memory allocations in SOH", MessageId = "type: OpenCvSharp.Vec3b")]
-		[SuppressMessage("ReSharper.DPA", "DPA0002: Excessive memory allocations in SOH", MessageId = "type: System.Double; size: 194MB")]
+		[SuppressMessage("ReSharper.DPA", "DPA0002: Excessive memory allocations in SOH", MessageId = "type: System.Double")]
 		public List<ShowCont> Run() {
 			List<Mat> images = _instruments.GetImages(@"media/project/proj_2/Chip_%03d.jpg");
 
@@ -23,10 +23,10 @@ namespace HelloWorld.Interfaces.Lessons {
 				Cv2.GaussianBlur(mat, mat, new Size(9, 9), 0);
 				
 				(double colorAvr1, double colorAvr2) = GetAvrColor(mat);
-				Mat draw1 = DrawDistFromColor(mat, colorAvr1);
-				Mat draw2 = DrawDistFromColor(mat, colorAvr2);
+				Mat draw1 = DrawDistFromColor(mat, (byte)colorAvr1);
+				Mat draw2 = DrawDistFromColor(mat, (byte)colorAvr2);
 				double colorAvr3 = (colorAvr2 + colorAvr1) / 2;
-				Mat draw3 = DrawDistFromColor(mat, colorAvr3);				
+				Mat draw3 = DrawDistFromColor(mat, (byte)colorAvr3);				
 				
 				Console.WriteLine($"{colorAvr1} {colorAvr2} {colorAvr3} ");
 				
@@ -50,6 +50,7 @@ namespace HelloWorld.Interfaces.Lessons {
 			return packResult;
 		}
 
+
 		(double colorAvr1, double colorAvr2) GetAvrColor(Mat originalPhoto) {
 			var ver2 = new ArtifactFinderProj2Ver2(this._instruments);
 			double colorAvr1 = ver2.GetAvrColorInSquare(originalPhoto, 0, 200);
@@ -63,7 +64,7 @@ namespace HelloWorld.Interfaces.Lessons {
 			return (colorAvr1, colorAvr2);
 		}
 
-		Mat DrawDistFromColor(Mat image, double baseColor) {
+		Mat DrawDistFromColor(Mat image, byte baseColor) {
 			Mat result = image.Clone();
 
 			for (var x = 0; x < 1300; x++)
@@ -71,7 +72,7 @@ namespace HelloWorld.Interfaces.Lessons {
 				var pixel = image.Get<Vec3b>(x, y);
 
 
-				var pixelItem1 = (double)pixel.Item0;
+				var pixelItem1 = pixel.Item0;
 				double abs = pixelItem1 > baseColor ? baseColor - pixelItem1 : pixelItem1 - baseColor;
 
 				result.Set(x, y, abs);
