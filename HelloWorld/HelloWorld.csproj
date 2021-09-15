@@ -130,6 +130,7 @@
 
     <ItemGroup>
       <Content Include="bin\Debug\net5.0-windows\media\edgeDetection\input_image-1.jpg" />
+      <Content Include="bin\Debug\net5.0-windows\media\lenna.png" />
       <Content Include="bin\Debug\net5.0\media\edgeDetection\input_image-1.jpg" />
     </ItemGroup>
 

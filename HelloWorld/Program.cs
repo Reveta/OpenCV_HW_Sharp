@@ -16,6 +16,7 @@ namespace HelloWorld {
 			// _tester = new ExtraThreshold();
 			// _tester = new ColorTransTest();
 			_tester = new ColorTransTestVer2();
+			// _tester = new MorphologySample();
 			_instruments = new InstrumentDef();
 		}
 
@@ -28,7 +29,5 @@ namespace HelloWorld {
 			_instruments.PrintResultStats(showConts);
 			_instruments.ShowResults(showConts);
 		}
-
-		
 	}
 }

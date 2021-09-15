@@ -17,7 +17,7 @@ namespace HelloWorld.Interfaces.Lessons {
 
 			images.ForEach(img => {
 				Mat distanceImg = img.Clone();
-				Scalar avrColorGrb = GetAvrColorInCenter(img, sideLenght: 600);
+				(Scalar avrColorGrb, Mat searchedLocation) = GetAvrColorInCenter(img, sideLenght: 700);
 
 				for (var x = 0; x < img.Rows; x++)
 				for (var y = 0; y < img.Cols; y++) {
@@ -29,24 +29,103 @@ namespace HelloWorld.Interfaces.Lessons {
 
 				Mat distanceImgInv = distanceImg.Clone();
 				Cv2.BitwiseNot(distanceImgInv, distanceImgInv);
+				Mat threshold = distanceImg
+						.Clone()
+						.Threshold(
+							(byte)GetAvrColorInCenter(distanceImg, sideLenght: 200).avrColorGrb.Val0 + 35,
+							maxval: 255,
+							ThresholdTypes.Binary)
+					;
 
-				Cv2.GaussianBlur(distanceImg, distanceImg, new Size(7, 7), 0);
-				Cv2.GaussianBlur(distanceImg, distanceImg, new Size(7, 7), 0);
-				Scalar avrColorDistanceImg = GetAvrColorInCenter(distanceImg, sideLenght: 200);
-				Mat threshold = distanceImg.Clone().Threshold(avrColorDistanceImg.Val0+50, 255, ThresholdTypes.Binary);
+				Mat morph = threshold
+						.Clone()
+						.Erode(GetKernel())
+						.Erode(GetKernel())
+						.Dilate(GetKernel())
+						.Erode(GetKernel())
+						.Dilate(GetKernel())
+						.Dilate(GetKernel())
+						.Dilate(GetKernel())
+						.Dilate(GetKernel())
+						.Dilate(GetKernel())
+					;
+
+
+				Mat result = morph.Clone().Canny(0, 255, 7)
+					.Dilate(GetKernel())
+					.Dilate(GetKernel())
+					.Dilate(GetKernel())
+					.Dilate(GetKernel());
+				
+				BlobDetection(result.Clone(), ref img);
 
 				this._inst.ShowResults(
 					this._inst.PackResult(
 						new ShowCont(
-							// new ShowCont("org", img),
-							new ShowCont("threshold", threshold),
-							new ShowCont("distanceImg", distanceImg)
-							// new ShowCont("distanceImgInv", distanceImgInv)
+							new ShowCont("org", img),
+							new ShowCont("dist", distanceImg),
+							new ShowCont("morph", morph)
+						),
+						new ShowCont(
+							new ShowCont("org", img),
+							new ShowCont("result", result)
 						)
 					));
 			});
 
 			return this._inst.PackResult();
+		}
+
+		private void BlobDetection(Mat mask, ref Mat org) {
+			var detectorParams = new SimpleBlobDetector.Params {
+				MinDistBetweenBlobs = 50, // 10 pixels between blobs
+				//MinRepeatability = 1,
+
+				//MinThreshold = 100,
+				//MaxThreshold = 255,
+				//ThresholdStep = 5,
+
+				// FilterByArea = false,
+				FilterByArea = true,
+				// MinArea = 0.011f, // 10 pixels squared
+				MaxArea = 6000,
+
+				FilterByCircularity = false,
+				//FilterByCircularity = true,
+				//MinCircularity = 0.001f,
+
+				// FilterByConvexity = false,
+				FilterByConvexity = true,
+				MinConvexity = 0.001f,
+				//MaxConvexity = 10,
+
+				// FilterByInertia = false,
+				FilterByInertia = true,
+				MinInertiaRatio = 0.001f,
+
+				FilterByColor = false
+				//FilterByColor = true,
+				//BlobColor = 255 // to extract light blobs
+			};
+			var simpleBlobDetector = SimpleBlobDetector.Create(detectorParams);
+			KeyPoint[] keyPoints = simpleBlobDetector.Detect(mask);
+
+			Cv2.DrawKeypoints(
+				image: org,
+				keypoints: keyPoints,
+				outImage: org,
+				color: Scalar.FromRgb(255, 0, 0),
+				flags: DrawMatchesFlags.Default);
+		}
+
+		private Mat GetKernel() {
+			byte[] kernelValues = {
+				0, 1, 0,
+				1, 1, 1,
+				0, 1, 0
+			};
+
+			return new Mat(3, 3, MatType.CV_8UC1, kernelValues);
 		}
 
 		private double GetColorDistance(Vec3b color, Vec3b baseColor) {
@@ -60,7 +139,7 @@ namespace HelloWorld.Interfaces.Lessons {
 			return distance;
 		}
 
-		private Scalar GetAvrColorInCenter(Mat img, int sideLenght) {
+		private (Scalar avrColorGrb, Mat searchedLocation) GetAvrColorInCenter(Mat img, int sideLenght) {
 			int halfSide = sideLenght / 2;
 
 			int widthStart = img.Width / 2 - halfSide;
@@ -68,12 +147,10 @@ namespace HelloWorld.Interfaces.Lessons {
 			int heightStart = img.Height / 2 - halfSide;
 			int heightEnd = img.Height / 2 + halfSide;
 
-			Scalar scalar = Cv2.Mean(img[
-				widthStart, widthEnd,
-				heightStart, heightEnd]
-			);
+			Mat searchedLocation = img[widthStart, widthEnd, heightStart, heightEnd];
+			Scalar scalar = Cv2.Mean(searchedLocation);
 
-			return scalar;
+			return (scalar, searchedLocation);
 		}
 	}
 }
