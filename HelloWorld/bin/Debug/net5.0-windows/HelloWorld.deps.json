@@ -10,8 +10,7 @@
         "dependencies": {
           "OpenCVInstruments": "1.0.0",
           "OpenCvSharp4": "4.5.3.20210817",
-          "OpenCvSharp4.Windows": "4.5.3.20210817",
-          "Prototype": "1.0.0"
+          "OpenCvSharp4.Windows": "4.5.3.20210817"
         },
         "runtime": {
           "HelloWorld.dll": {}

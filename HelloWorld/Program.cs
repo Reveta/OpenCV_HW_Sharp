@@ -14,8 +14,8 @@ namespace HelloWorld {
 		private static void Config() {
 			// _tester = new EdgeDetector();
 			// _tester = new ExtraThreshold();
-			// _tester = new ColorTransTest();
-			_tester = new ColorTransTestVer2();
+			_tester = new ColorTransTest();
+			// _tester = new ColorTransTestVer2();
 			// _tester = new MorphologySample();
 			_instruments = new InstrumentDef();
 		}

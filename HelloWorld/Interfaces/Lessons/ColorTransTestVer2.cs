@@ -15,7 +15,7 @@ namespace HelloWorld.Interfaces.Lessons {
 		public List<ShowCont> Run() {
 			List<Mat> images = this._inst.GetImages(@"media/project/proj_2/Chip_%03d.jpg");
 
-			images.ForEach(img => {
+			images.ForEach(img => { L : 
 				Mat distanceImg = img.Clone();
 				(Scalar avrColorGrb, Mat searchedLocation) = this._inst.GetAvrColorInCenter(img, sideLenght: 700);
 
