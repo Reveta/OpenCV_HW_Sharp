@@ -103,5 +103,17 @@ namespace OpenCVInstruments.Impl {
 
 			window.Move(((int)winWidth + 20) * count, 0);
 		}
+		
+		public (Scalar avrColorGrb, Mat searchedLocation) GetAvrColorInCenter(Mat img, int sideLenght) {
+			int halfSide = sideLenght / 2;
+			int widthStart = img.Width / 2 - halfSide;
+			int widthEnd = img.Width / 2 + halfSide;
+			int heightStart = img.Height / 2 - halfSide;
+			int heightEnd = img.Height / 2 + halfSide;
+			Mat searchedLocation = img[widthStart, widthEnd, heightStart, heightEnd];
+
+			Scalar scalar = Cv2.Mean(searchedLocation);
+			return (scalar, searchedLocation);
+		}
 	}
 }

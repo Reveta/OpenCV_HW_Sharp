@@ -16,5 +16,7 @@ namespace OpenCVInstruments.Interfaces {
 		public List<ShowCont> PackResult();
 
 		public void PrintResultStats(List<ShowCont> showConts);
+
+		public (Scalar avrColorGrb, Mat searchedLocation) GetAvrColorInCenter(Mat img, int sideLenght);
 	}
 }

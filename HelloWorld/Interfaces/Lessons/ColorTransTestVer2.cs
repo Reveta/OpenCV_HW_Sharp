@@ -17,7 +17,7 @@ namespace HelloWorld.Interfaces.Lessons {
 
 			images.ForEach(img => {
 				Mat distanceImg = img.Clone();
-				(Scalar avrColorGrb, Mat searchedLocation) = GetAvrColorInCenter(img, sideLenght: 700);
+				(Scalar avrColorGrb, Mat searchedLocation) = this._inst.GetAvrColorInCenter(img, sideLenght: 700);
 
 				for (var x = 0; x < img.Rows; x++)
 				for (var y = 0; y < img.Cols; y++) {
@@ -32,7 +32,7 @@ namespace HelloWorld.Interfaces.Lessons {
 				Mat threshold = distanceImg
 						.Clone()
 						.Threshold(
-							(byte)GetAvrColorInCenter(distanceImg, sideLenght: 200).avrColorGrb.Val0 + 35,
+							(byte)this._inst.GetAvrColorInCenter(distanceImg, sideLenght: 200).avrColorGrb.Val0 + 35,
 							maxval: 255,
 							ThresholdTypes.Binary)
 					;
@@ -59,7 +59,7 @@ namespace HelloWorld.Interfaces.Lessons {
 					.Dilate(GetKernel())
 					.Dilate(GetKernel())
 					.Dilate(GetKernel());
-				
+
 				BlobDetection(result.Clone(), ref img);
 
 				this._inst.ShowResults(
@@ -75,7 +75,6 @@ namespace HelloWorld.Interfaces.Lessons {
 						)
 					));
 			});
-
 			return this._inst.PackResult();
 		}
 
@@ -110,9 +109,9 @@ namespace HelloWorld.Interfaces.Lessons {
 				//FilterByColor = true,
 				//BlobColor = 255 // to extract light blobs
 			};
+
 			var simpleBlobDetector = SimpleBlobDetector.Create(detectorParams);
 			KeyPoint[] keyPoints = simpleBlobDetector.Detect(mask);
-
 			Cv2.DrawKeypoints(
 				image: org,
 				keypoints: keyPoints,
@@ -127,7 +126,6 @@ namespace HelloWorld.Interfaces.Lessons {
 				1, 1, 1,
 				0, 1, 0
 			};
-
 			return new Mat(3, 3, MatType.CV_8UC1, kernelValues);
 		}
 
@@ -138,22 +136,7 @@ namespace HelloWorld.Interfaces.Lessons {
 
 			var distance = Math.Sqrt(d.Item0 * d.Item0 + d.Item1 * d.Item1 +
 			                         d.Item2 * d.Item2);
-
 			return distance;
-		}
-
-		private (Scalar avrColorGrb, Mat searchedLocation) GetAvrColorInCenter(Mat img, int sideLenght) {
-			int halfSide = sideLenght / 2;
-
-			int widthStart = img.Width / 2 - halfSide;
-			int widthEnd = img.Width / 2 + halfSide;
-			int heightStart = img.Height / 2 - halfSide;
-			int heightEnd = img.Height / 2 + halfSide;
-
-			Mat searchedLocation = img[widthStart, widthEnd, heightStart, heightEnd];
-			Scalar scalar = Cv2.Mean(searchedLocation);
-
-			return (scalar, searchedLocation);
 		}
 	}
 }
