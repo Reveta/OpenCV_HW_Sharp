@@ -26,7 +26,7 @@ namespace HelloWorld.Interfaces.Lessons {
 					var pixelColorDistance = (byte)GetColorDistance(pixel, avrColorGrb.ToVec3b());
 					distanceImg.Set(x, y, new Vec3b(pixelColorDistance, pixelColorDistance, pixelColorDistance));
 				}
-
+ 
 				Mat distanceImgInv = distanceImg.Clone();
 				Cv2.BitwiseNot(distanceImgInv, distanceImgInv);
 				Mat threshold = distanceImg
