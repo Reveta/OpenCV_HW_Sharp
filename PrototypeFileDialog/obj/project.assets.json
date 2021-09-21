@@ -128,6 +128,23 @@
         "runtime": {
           "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
+      },
+      "OpenCVInstruments/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "OpenCvSharp4": "4.5.3.20210817",
+          "OpenCvSharp4.Windows": "4.5.3.20210817"
+        },
+        "compile": {
+          "bin/placeholder/OpenCVInstruments.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OpenCVInstruments.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
       }
     }
   },
@@ -345,12 +362,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "OpenCVInstruments/1.0.0": {
+      "type": "project",
+      "path": "../OpenCVInstruments/OpenCVInstruments.csproj",
+      "msbuildProject": "../OpenCVInstruments/OpenCVInstruments.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
-      "OpenCvSharp4 >= 4.5.3.20210817",
-      "OpenCvSharp4.Windows >= 4.5.3.20210817",
+      "OpenCVInstruments >= 1.0.0",
       "OpenCvSharp4.runtime.win >= 4.5.3.20210817"
     ]
   },
@@ -385,7 +406,11 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\gfdsr\\OneDrive\\prFiles\\job\\Freelance\\OpenCVOrigin\\cSharp\\HelloWorld\\OpenCVInstruments\\OpenCVInstruments.csproj": {
+              "projectPath": "C:\\Users\\gfdsr\\OneDrive\\prFiles\\job\\Freelance\\OpenCVOrigin\\cSharp\\HelloWorld\\OpenCVInstruments\\OpenCVInstruments.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -398,14 +423,6 @@
       "net5.0-windows7.0": {
         "targetAlias": "net5.0-windows",
         "dependencies": {
-          "OpenCvSharp4": {
-            "target": "Package",
-            "version": "[4.5.3.20210817, )"
-          },
-          "OpenCvSharp4.Windows": {
-            "target": "Package",
-            "version": "[4.5.3.20210817, )"
-          },
           "OpenCvSharp4.runtime.win": {
             "target": "Package",
             "version": "[4.5.3.20210817, )"

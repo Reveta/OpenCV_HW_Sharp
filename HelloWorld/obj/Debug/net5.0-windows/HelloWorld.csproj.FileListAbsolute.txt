@@ -27,9 +27,3 @@ C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\Hel
 C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\HelloWorld\obj\Debug\net5.0-windows\HelloWorld.genruntimeconfig.cache
 C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\HelloWorld\bin\Debug\net5.0-windows\OpenCVInstruments.dll
 C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\HelloWorld\bin\Debug\net5.0-windows\OpenCVInstruments.pdb
-C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\HelloWorld\bin\Debug\net5.0-windows\Prototype.deps.json
-C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\HelloWorld\bin\Debug\net5.0-windows\Prototype.runtimeconfig.json
-C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\HelloWorld\bin\Debug\net5.0-windows\Prototype.runtimeconfig.dev.json
-C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\HelloWorld\bin\Debug\net5.0-windows\Prototype.exe
-C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\HelloWorld\bin\Debug\net5.0-windows\Prototype.dll
-C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\HelloWorld\bin\Debug\net5.0-windows\Prototype.pdb
