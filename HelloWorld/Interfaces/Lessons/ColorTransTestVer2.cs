@@ -50,6 +50,9 @@ namespace HelloWorld.Interfaces.Lessons {
 						.Dilate(GetKernel())
 					;
 
+				// Mat morphTest = new Mat();
+				// Cv2.MorphologyEx(threshold, morphTest, );
+
 
 				Mat result = morph.Clone().Canny(0, 255, 7)
 					.Dilate(GetKernel())
