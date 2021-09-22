@@ -1,15 +1,13 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using OpenCvSharp;
 using PrototypeFileDialog.Impl;
 
 namespace PrototypeFileDialog {
 	static class Program {
-		private static readonly IAnalyzerCV AnalyzerCv = new AnalyzerMock();
+		// private static readonly IAnalyzerCV AnalyzerCv = new AnalyzerMock();
+		private static readonly IAnalyzerCV AnalyzerCv = new AnalyzerVer1();
 		
 		[STAThread]
 		static void Main() {

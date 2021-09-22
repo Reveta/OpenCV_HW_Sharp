@@ -6,7 +6,6 @@ using OpenCVInstruments.Containers;
 using OpenCVInstruments.Impl;
 using OpenCVInstruments.Interfaces;
 using OpenCvSharp;
-using Prototype.Impl;
 
 namespace HelloWorld.Interfaces.Lessons {
 	public class ColorTransTest : ICodeTester {

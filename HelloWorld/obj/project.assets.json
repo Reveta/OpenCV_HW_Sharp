@@ -129,6 +129,23 @@
           "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
+      "OpenCVAnalyzer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "OpenCVInstruments": "1.0.0",
+          "OpenCvSharp4": "4.5.3.20210817"
+        },
+        "compile": {
+          "bin/placeholder/OpenCVAnalyzer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OpenCVAnalyzer.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
       "OpenCVInstruments/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -363,6 +380,11 @@
         "version.txt"
       ]
     },
+    "OpenCVAnalyzer/1.0.0": {
+      "type": "project",
+      "path": "../OpenCVAnalyzer/OpenCVAnalyzer.csproj",
+      "msbuildProject": "../OpenCVAnalyzer/OpenCVAnalyzer.csproj"
+    },
     "OpenCVInstruments/1.0.0": {
       "type": "project",
       "path": "../OpenCVInstruments/OpenCVInstruments.csproj",
@@ -371,6 +393,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
+      "OpenCVAnalyzer >= 1.0.0",
       "OpenCVInstruments >= 1.0.0",
       "OpenCvSharp4 >= 4.5.3.20210817",
       "OpenCvSharp4.Windows >= 4.5.3.20210817"
@@ -408,6 +431,9 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
+            "C:\\Users\\gfdsr\\OneDrive\\prFiles\\job\\Freelance\\OpenCVOrigin\\cSharp\\HelloWorld\\OpenCVAnalyzer\\OpenCVAnalyzer.csproj": {
+              "projectPath": "C:\\Users\\gfdsr\\OneDrive\\prFiles\\job\\Freelance\\OpenCVOrigin\\cSharp\\HelloWorld\\OpenCVAnalyzer\\OpenCVAnalyzer.csproj"
+            },
             "C:\\Users\\gfdsr\\OneDrive\\prFiles\\job\\Freelance\\OpenCVOrigin\\cSharp\\HelloWorld\\OpenCVInstruments\\OpenCVInstruments.csproj": {
               "projectPath": "C:\\Users\\gfdsr\\OneDrive\\prFiles\\job\\Freelance\\OpenCVOrigin\\cSharp\\HelloWorld\\OpenCVInstruments\\OpenCVInstruments.csproj"
             }

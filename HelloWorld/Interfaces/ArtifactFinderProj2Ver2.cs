@@ -1,7 +1,7 @@
 ﻿using OpenCVInstruments.Interfaces;
 using OpenCvSharp;
 
-namespace Prototype.Impl {
+namespace HelloWorld.Interfaces {
 	public class ArtifactFinderProj2Ver2 {
 		private readonly IInstruments _instruments;
 

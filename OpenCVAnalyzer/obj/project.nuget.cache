@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "C9yi30X6tFKe8Dqu+pG827XgSjyrQkVLrY3NgYqmzctoMxONz3rPLKh5d09KqYh+mR3UtaUxBvv2fnGw4PwqWQ==",
+  "dgSpecHash": "hODFoQgqNmlA1cAWmVVNhuPoMcDmq2f+8hjhdO1pFPT3q1YKoZ7PilURx8FhN6ijOrlLmMQ0BnrLN1laubXA+A==",
   "success": true,
   "projectFilePath": "C:\\Users\\gfdsr\\OneDrive\\prFiles\\job\\Freelance\\OpenCVOrigin\\cSharp\\HelloWorld\\OpenCVAnalyzer\\OpenCVAnalyzer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gfdsr\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\gfdsr\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\gfdsr\\.nuget\\packages\\opencvsharp4\\4.5.3.20210817\\opencvsharp4.4.5.3.20210817.nupkg.sha512",
+    "C:\\Users\\gfdsr\\.nuget\\packages\\opencvsharp4.runtime.win\\4.5.3.20210817\\opencvsharp4.runtime.win.4.5.3.20210817.nupkg.sha512",
+    "C:\\Users\\gfdsr\\.nuget\\packages\\opencvsharp4.windows\\4.5.3.20210817\\opencvsharp4.windows.4.5.3.20210817.nupkg.sha512",
+    "C:\\Users\\gfdsr\\.nuget\\packages\\opencvsharp4.wpfextensions\\4.5.3.20210817\\opencvsharp4.wpfextensions.4.5.3.20210817.nupkg.sha512",
     "C:\\Users\\gfdsr\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512",
     "C:\\Users\\gfdsr\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\gfdsr\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"

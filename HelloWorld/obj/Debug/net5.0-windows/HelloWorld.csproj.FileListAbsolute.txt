@@ -27,3 +27,5 @@ C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\Hel
 C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\HelloWorld\obj\Debug\net5.0-windows\ref\HelloWorld.dll
 C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\HelloWorld\obj\Debug\net5.0-windows\HelloWorld.pdb
 C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\HelloWorld\obj\Debug\net5.0-windows\HelloWorld.genruntimeconfig.cache
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\HelloWorld\bin\Debug\net5.0-windows\OpenCVAnalyzer.dll
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\HelloWorld\bin\Debug\net5.0-windows\OpenCVAnalyzer.pdb

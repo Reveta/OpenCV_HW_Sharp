@@ -27,3 +27,5 @@ C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\Pro
 C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\PrototypeFileDialog\bin\Debug\net5.0-windows\runtimes\win-x86\native\opencv_videoio_ffmpeg453.dll
 C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\PrototypeFileDialog\bin\Debug\net5.0-windows\OpenCVInstruments.dll
 C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\PrototypeFileDialog\bin\Debug\net5.0-windows\OpenCVInstruments.pdb
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\PrototypeFileDialog\bin\Debug\net5.0-windows\OpenCVAnalyzer.dll
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\PrototypeFileDialog\bin\Debug\net5.0-windows\OpenCVAnalyzer.pdb

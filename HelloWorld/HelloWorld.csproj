@@ -136,6 +136,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\OpenCVAnalyzer\OpenCVAnalyzer.csproj" />
       <ProjectReference Include="..\OpenCVInstruments\OpenCVInstruments.csproj" />
     </ItemGroup>
 
