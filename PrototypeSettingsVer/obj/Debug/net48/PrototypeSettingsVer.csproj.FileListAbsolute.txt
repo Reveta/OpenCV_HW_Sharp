@@ -1,0 +1,7 @@
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\PrototypeSettingsVer\obj\Debug\net48\PrototypeSettingsVer.csproj.AssemblyReference.cache
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\PrototypeSettingsVer\obj\Debug\net48\PrototypeSettingsVer.Form1.resources
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\PrototypeSettingsVer\obj\Debug\net48\PrototypeSettingsVer.csproj.GenerateResource.cache
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\PrototypeSettingsVer\obj\Debug\net48\PrototypeSettingsVer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\PrototypeSettingsVer\obj\Debug\net48\PrototypeSettingsVer.AssemblyInfoInputs.cache
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\PrototypeSettingsVer\obj\Debug\net48\PrototypeSettingsVer.AssemblyInfo.cs
+C:\Users\gfdsr\OneDrive\prFiles\job\Freelance\OpenCVOrigin\cSharp\HelloWorld\PrototypeSettingsVer\obj\Debug\net48\PrototypeSettingsVer.csproj.CoreCompileInputs.cache

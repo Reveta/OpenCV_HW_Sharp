@@ -22,19 +22,24 @@ namespace PrototypeFileDialog.Impl {
 			var componentCount = 0;
 			var contourIndex = 0;
 
-			while ((contourIndex >= 0)) {
-				Cv2.DrawContours(
-					markers,
-					contours,
-					contourIndex,
-					color: Scalar.All(componentCount + 1),
-					thickness: -1,
-					lineType: LineTypes.Link8,
-					hierarchy: hierarchyIndexes,
-					maxLevel: int.MaxValue);
-				componentCount++;
-				contourIndex = hierarchyIndexes[contourIndex].Next;
+			try {
+				while ((contourIndex >= 0)) {
+					Cv2.DrawContours(
+						markers,
+						contours,
+						contourIndex,
+						color: Scalar.All(componentCount + 1),
+						thickness: -1,
+						lineType: LineTypes.Link8,
+						hierarchy: hierarchyIndexes,
+						maxLevel: int.MaxValue);
+					componentCount++;
+					contourIndex = hierarchyIndexes[contourIndex].Next;
+				}
+			} catch (Exception e) {
+				Console.WriteLine(e);
 			}
+			
 
 			var colorTable = new List<Vec3b>();
 			for (var i = 0; i < componentCount; i++) {

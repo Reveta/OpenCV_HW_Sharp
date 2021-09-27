@@ -72,7 +72,7 @@ namespace PrototypeFileDialog {
 		}
 	}
 
-	internal enum EFileStatus {
+	public enum EFileStatus {
 		Ok,
 		NotFound,
 		EmptyPath
