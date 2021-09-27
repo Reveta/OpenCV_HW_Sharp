@@ -22,22 +22,22 @@ namespace HelloWorld.Interfaces.Lessons {
 
 		[SuppressMessage("ReSharper.DPA", "DPA0001: Memory allocation issues")]
 		public List<ShowCont> Run() {
-			List<Mat> images = this._inst.GetImages(@"media/project/proj_2/Chip_%03d.jpg");
+			Mat img = this._inst.GetImages(@"media/project/proj_2/Chip_%03d.jpg")[0];
 
 			Console.Write("Performing some task... ");
 
 			List<ShowCont> packResult = this._inst.PackResult();
-			images.ForEach(img => {
+			// images.ForEach(img => {
 				Mat clone = img.Clone();
 				packResult.Add(
 					new ShowCont(
 						// new ShowCont("org", img),
-						new ShowCont("Result", this._analyzer.Analyze(clone)
+						new ShowCont("Result", this._analyzer.GetMask(clone)
 						)));
 
 
-				NestProgress(images.Count);
-			});
+				// NestProgress(images.Count);
+			// });
 
 			return packResult;
 		}

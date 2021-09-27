@@ -2,6 +2,6 @@
 
 namespace OpenCVAnalyzer {
 	public interface IMatAnalyzer {
-		public Mat Analyze(Mat image);
+		public Mat GetMask(Mat image);
 	}
 }

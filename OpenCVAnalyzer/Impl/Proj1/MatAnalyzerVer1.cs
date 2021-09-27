@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
-using OpenCVInstruments.Containers;
 using OpenCVInstruments.Impl;
 using OpenCVInstruments.Interfaces;
 using OpenCvSharp;
@@ -13,7 +10,7 @@ namespace OpenCVAnalyzer.Impl.Proj1 {
 	public class MatAnalyzerVer1 : IMatAnalyzer {
 		private IInstruments _inst = new InstrumentDef();
 
-		public Mat Analyze(Mat img) {
+		public Mat GetMask(Mat img) {
 			Mat distanceImg = img.Clone();
 			(Scalar avrColorGrb, Mat searchedLocation) = this._inst.GetAvrColorInCenter(img, sideLenght: 700);
 
@@ -38,15 +35,15 @@ namespace OpenCVAnalyzer.Impl.Proj1 {
 			Mat morph = threshold
 					.Clone()
 				.Erode(GetKernel())
-				.Dilate(GetKernel())
-				.Dilate(GetKernel())
-				.Dilate(GetKernel())
-				.Dilate(GetKernel())
-				.Dilate(GetKernel())
-				.Erode(GetKernel())
+				// .Dilate(GetKernel())
+				// .Dilate(GetKernel())
+				// .Dilate(GetKernel())
+				// .Dilate(GetKernel())
+				// .Dilate(GetKernel())
+				// .Erode(GetKernel())
 				;
 
-			morph.MorphologyEx(MorphTypes.Open, GetKernel(), iterations: 1);
+			// morph.MorphologyEx(MorphTypes.Open, GetKernel(), iterations: 23);
 
 
 			Mat result = morph.Clone().Canny(0, 255, 3)
@@ -56,17 +53,18 @@ namespace OpenCVAnalyzer.Impl.Proj1 {
 				// .Dilate(GetKernel())
 				;
 
+			
+			// this._inst.ShowResults(
+			// 	this._inst.PackResult(
+			// 		new ShowCont(
+			// 			new ShowCont("org", img),
+			// 			new ShowCont("org", img)
+			// 			// new ShowCont("counters", drawCounters)
+			// 		)
+			// 	));
 			Mat drawCounters = DrawCounters(img, result);
 
-			this._inst.ShowResults(
-				this._inst.PackResult(
-					new ShowCont(
-						new ShowCont("morph", morph),
-						new ShowCont("counters", drawCounters)
-					)
-				));
-
-			return drawCounters;
+			return img;
 		}
 
 

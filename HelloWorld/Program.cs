@@ -16,7 +16,8 @@ namespace HelloWorld {
 			// _tester = new EdgeDetector();
 			// _tester = new ExtraThreshold();
 			// _tester = new ColorTransTest();
-			_tester = new ColorTransTestVer2();
+			// _tester = new ColorTransTestVer2();
+			_tester = new JekaVer1();
 			// _tester = new MorphologySample();
 			_instruments = new InstrumentDef();
 		}

@@ -3,11 +3,13 @@ using System.IO;
 using System.Windows.Forms;
 using OpenCvSharp;
 using PrototypeFileDialog.Impl;
+using PrototypeFileDialog.Interfaces;
 
 namespace PrototypeFileDialog {
 	static class Program {
 		// private static readonly IAnalyzerCV AnalyzerCv = new AnalyzerMock();
 		private static readonly IAnalyzerCV AnalyzerCv = new AnalyzerVer1();
+
 		
 		[STAThread]
 		static void Main() {
